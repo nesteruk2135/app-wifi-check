@@ -44,7 +44,7 @@ const DATOS_TELEFONOS: Marca[] = [
       { "modelo": "Galaxy A35 / A34 / A33", "compatible": true },
       { "modelo": "Galaxy A25 / A24 / A23", "compatible": true },
       { "modelo": "Galaxy A15 / A14 / A13", "compatible": true },
-      { "modelo": "Galaxy A10 / A12 / A11", "compatible": true },
+      { "modelo": "Galaxy A10 / A12 / A11", "compatible": false },
       { "modelo": "Galaxy A05 / A04 / A03", "compatible": true },
       { "modelo": "Galaxy A02 / A01", "compatible": false },
       { "modelo": "Galaxy M34", "compatible": true },
@@ -160,7 +160,7 @@ const DATOS_TELEFONOS: Marca[] = [
         <div *ngIf="resultado !== null" class="result-area">
           <div 
             [ngClass]="{
-              'result-compatible': resultado?.compatible, 
+              'result-compatible': resultado.compatible, 
               'result-incompatible': resultado && !resultado.compatible,
               'result-hidden': !resultado
             }"
